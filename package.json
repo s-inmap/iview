@@ -1,8 +1,8 @@
 {
-    "name": "iview",
-    "version": "2.14.3",
-    "title": "iView",
-    "description": "A high quality UI components Library with Vue.js",
+    "name": "iview-team",
+    "version": "0.0.1",
+    "title": "iView-team",
+    "description": "V2.14.3 fork from/A high quality UI components Library with Vue.js",
     "homepage": "http://www.iviewui.com",
     "keywords": [
         "iview",
@@ -35,7 +35,7 @@
         "type": "git",
         "url": "https://github.com/iview/iview"
     },
-    "author": "Aresn",
+    "author": "huiyin li <huiyin.li@tendcloud.com>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/iview/iview/issues"

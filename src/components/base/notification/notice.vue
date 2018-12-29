@@ -79,6 +79,9 @@
             },
             transitionName: {
                 type: String
+            },
+            maxCount: {
+                type: Number
             }
         },
         data () {

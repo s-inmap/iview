@@ -14,6 +14,7 @@
             :closable="notice.closable"
             :name="notice.name"
             :transition-name="notice.transitionName"
+            :maxCount="notice.maxCount"
             :on-close="notice.onClose">
         </Notice>
     </div>
@@ -70,6 +71,7 @@
         methods: {
             add (notice) {
                 const name = notice.name || getUuid();
+                let maxCount = notice.maxCount;
 
                 let _notice = Object.assign({
                     styles: {
@@ -81,7 +83,12 @@
                     name: name
                 }, notice);
 
-                this.notices.push(_notice);
+                if(maxCount && this.notices.length <= maxCount - 1){
+                    this.notices.push(_notice);
+                }
+                if(!maxCount){
+                    this.notices.push(_notice);
+                }
             },
             close (name) {
                 const notices = this.notices;

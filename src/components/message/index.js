@@ -20,7 +20,7 @@ const iconTypes = {
     'loading': 'load-c'
 };
 
-function getMessageInstance () {
+function getMessageInstance() {
     messageInstance = messageInstance || Notification.newInstance({
         prefixCls: prefixCls,
         styles: {
@@ -31,17 +31,17 @@ function getMessageInstance () {
     return messageInstance;
 }
 
-function notice (content = '', duration = defaults.duration, type, onClose = function () {}, closable = false, render = function () {}) {
+function notice(content = '', duration = defaults.duration, type, onClose = function() {}, closable = false, render = function() {}, maxCount) {
     const iconType = iconTypes[type];
 
     // if loading
     const loadCls = type === 'loading' ? ' ivu-load-loop' : '';
-
     let instance = getMessageInstance();
 
     instance.notice({
         name: `${prefixKey}${name}`,
         duration: duration,
+        maxCount: maxCount,
         styles: {},
         transitionName: 'move-up',
         content: `
@@ -55,44 +55,45 @@ function notice (content = '', duration = defaults.duration, type, onClose = fun
         closable: closable,
         type: 'message'
     });
-
     // 用于手动消除
-    return (function () {
+    return (function() {
         let target = name++;
-
-        return function () {
+        return function() {
             instance.remove(`${prefixKey}${target}`);
         };
     })();
+
+
+
 }
 
 export default {
     name: 'Message',
 
-    info (options) {
+    info(options) {
         return this.message('info', options);
     },
-    success (options) {
+    success(options) {
         return this.message('success', options);
     },
-    warning (options) {
+    warning(options) {
         return this.message('warning', options);
     },
-    error (options) {
+    error(options) {
         return this.message('error', options);
     },
-    loading (options) {
+    loading(options) {
         return this.message('loading', options);
     },
-    message(type, options){
+    message(type, options) {
         if (typeof options === 'string') {
             options = {
                 content: options
             };
         }
-        return notice(options.content, options.duration, type, options.onClose, options.closable, options.render);
+        return notice(options.content, options.duration, type, options.onClose, options.closable, options.render, options.maxCount);
     },
-    config (options) {
+    config(options) {
         if (options.top || options.top === 0) {
             defaults.top = options.top;
         }
@@ -100,7 +101,7 @@ export default {
             defaults.duration = options.duration;
         }
     },
-    destroy () {
+    destroy() {
         let instance = getMessageInstance();
         messageInstance = null;
         instance.destroy('ivu-message');

@@ -29,16 +29,21 @@
                 })
             },
             success () {
-                this.$Message.success({
+               this.$Message.success({
                     content: '这是一条成功的提示',
-                    duration: 4
+                    duration: 4,
+                    maxCount: 1
                 });
             },
             warning () {
                 this.$Message.warning('这是一条警告的提示');
             },
             error () {
-                this.$Message.error('对方不想说话，并且向你抛出了一个异常');
+                this.$Message.error({
+                    content: '对方不想说话，并且向你抛出了一个异常',
+                    duration: 4,
+                    maxCount: 1
+                });
             },
             destroy () {
                 this.$Message.destroy();
