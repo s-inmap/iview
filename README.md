@@ -60,7 +60,7 @@ We recommend you create your project through [iView Cli](https://github.com/ivie
 
 Using npm:
 ```
-npm install iview --save
+npm install iview-team --save
 ```
 
 Using a script tag for global use:
