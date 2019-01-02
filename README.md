@@ -60,7 +60,7 @@ We recommend you create your project through [iView Cli](https://github.com/ivie
 
 Using npm:
 ```
-npm install iview --save
+npm install iview-team --save
 ```
 
 Using a script tag for global use:
@@ -92,7 +92,7 @@ You can find more info [on the website](https://www.iviewui.com/docs/guide/insta
 Using css via `import`:
 
 ```js
-import 'iview/dist/styles/iview.css';
+import 'iview-team/dist/styles/iview.css';
 ```
 
 ## Compatibility
