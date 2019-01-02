@@ -1,6 +1,7 @@
 import Affix from './components/affix';
 import Alert from './components/alert';
 import AutoComplete from './components/auto-complete';
+import YMAutoComplete from './components/ym-auto-complete';
 import Avatar from './components/avatar';
 import BackTop from './components/back-top';
 import Badge from './components/badge';
@@ -120,7 +121,8 @@ const components = {
     Tooltip,
     Transfer,
     Tree,
-    Upload
+    Upload,
+    YMAutoComplete,
 };
 
 const iview = {
