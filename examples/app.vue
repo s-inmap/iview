@@ -63,7 +63,7 @@ nav {
                 <li><router-link to="/auto-complete">AutoComplete</router-link></li>
                 <li><router-link to="/scroll">Scroll</router-link></li>
                 <li><router-link to="/ym-auto-complete">ym-auto-complete</router-link></li>
-               
+                <li><router-link to="/icon">Icon</router-link></li>
             </ul>
         </nav>
         <router-view></router-view>

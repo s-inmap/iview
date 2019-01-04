@@ -206,6 +206,10 @@ const router = new VueRouter({
         {
             path: '/ym-auto-complete',
             component: (resolve) => require(['./routers/ym-auto-complete.vue'], resolve)
+        },
+        {
+            path: '/icon',
+            component: (resolve) => require(['./routers/icon.vue'], resolve)
         }
     ]
 });
