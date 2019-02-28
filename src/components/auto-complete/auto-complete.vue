@@ -14,7 +14,8 @@
         auto-complete
         :remote-method="remoteMethod"
         @on-change="handleChange"
-        :transfer="transfer">
+        :transfer="transfer"
+        @on-open-change="onOpenChange">
         <slot name="input">
             <i-input
                 :element-id="elementId"
@@ -160,6 +161,11 @@
                 if (!this.clearable) return;
                 this.currentValue = '';
                 this.$refs.select.reset();
+            },
+            onOpenChange(val){
+                if(val === false){
+                    this.$refs.input.blur();
+                }
             }
         }
     };
