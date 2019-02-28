@@ -1,2 +1,2 @@
-import YMAutoComplete from './AutoComplete.vue';
+import YMAutoComplete from './AutoComplete/AutoComplete.vue';
 export default YMAutoComplete;
