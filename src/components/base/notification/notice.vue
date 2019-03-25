@@ -163,7 +163,8 @@
             }
 
             // check if with desc in Notice component
-            if (this.prefixCls === 'ivu-notice') {
+            // if (this.prefixCls === 'ivu-notice') {
+            if (this.prefixCls.indexOf('ivu-notice') !== -1) {
                 let desc = this.$refs.content.querySelectorAll(`.${this.prefixCls}-desc`)[0];
                 this.withDesc = this.render ? true : (desc ? desc.innerHTML !== '' : false);
             }
