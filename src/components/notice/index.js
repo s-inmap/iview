@@ -1,7 +1,6 @@
 import Notification from '../base/notification';
 
-// const prefixCls = 'ivu-notice';
-const prefixCls = 'none-ivu-custom-class ivu-notice';
+const prefixCls = 'ivu-notice';
 const iconPrefixCls = 'ivu-icon';
 const prefixKey = 'ivu_notice_key_';
 
@@ -35,7 +34,7 @@ function notice (type, options) {
     const noticeKey = options.name || `${prefixKey}${name}`;
     const onClose = options.onClose || function () {};
     const render = options.render;
-    // todo const btn = options.btn || null;
+
     const duration = (options.duration === 0) ? 0 : options.duration || defaultDuration;
 
     name++;
