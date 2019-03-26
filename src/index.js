@@ -50,6 +50,7 @@ import Transfer from './components/transfer';
 import Tree from './components/tree';
 import Upload from './components/upload';
 import {Row, Col} from './components/grid';
+import ZX_Tabs from './components/zxtabs';
 import {Select, Option, OptionGroup} from './components/select';
 import locale from './locale/index';
 
@@ -123,6 +124,7 @@ const components = {
     Tree,
     Upload,
     YMAutoComplete,
+    ZX_Tabs
 };
 
 const iview = {

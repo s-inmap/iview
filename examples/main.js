@@ -208,6 +208,10 @@ const router = new VueRouter({
             component: (resolve) => require(['./routers/ym-auto-complete.vue'], resolve)
         },
         {
+            path: '/zxtabs',
+            component: (resolve) => require(['./routers/zxtabs.vue'], resolve)
+        },
+        {
             path: '/icon',
             component: (resolve) => require(['./routers/icon.vue'], resolve)
         }
